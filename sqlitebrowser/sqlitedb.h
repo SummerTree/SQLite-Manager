@@ -14,15 +14,15 @@
 
 enum
 {
- kLogMsg_User,
- kLogMsg_App
+    kLogMsg_User,
+    kLogMsg_App
 };
 
 enum
 {
-kEncodingUTF8,
-kEncodingLatin1,
-kEncodingNONE
+    kEncodingUTF8,
+    kEncodingLatin1,
+    kEncodingNONE
 };
 
 static QString applicationName = QString("SQLite Database Browser");
@@ -39,94 +39,94 @@ typedef QList<QStringList> rowList;
 typedef QMap<int, QString> resultMap;
 
 class DBBrowserField
-    {    
-    public:
-        DBBrowserField() : name( "" ) { }
-        DBBrowserField( const QString& wname,const QString& wtype )
-            : name( wname), type( wtype )
-        { }
-        QString getname() const { return name; }
-        QString gettype() const { return type; }
- private:
-        QString name;
-        QString type;
- };
+{
+public:
+    DBBrowserField() : name( "" ) { }
+    DBBrowserField( const QString& wname,const QString& wtype )
+    : name( wname), type( wtype )
+    { }
+    QString getname() const { return name; }
+    QString gettype() const { return type; }
+private:
+    QString name;
+    QString type;
+};
 
 class DBBrowserIndex
-    {    
-    public:
-        DBBrowserIndex() : name( "" ) { }
-       DBBrowserIndex( const QString& wname,const QString& wsql )
-            : name( wname), sql( wsql )
-        { }
-        QString getname() const { return name; }
-        QString getsql() const { return sql; }
+{
+public:
+    DBBrowserIndex() : name( "" ) { }
+    DBBrowserIndex( const QString& wname,const QString& wsql )
+    : name( wname), sql( wsql )
+    { }
+    QString getname() const { return name; }
+    QString getsql() const { return sql; }
 private:
-        QString name;
-        QString sql;
- };
+    QString name;
+    QString sql;
+};
 
 
 class DBBrowserTable
-    {    
-    public:
-        DBBrowserTable() : name( "" ) { }
-        DBBrowserTable( const QString& wname,const QString& wsql )
-            : name( wname), sql( wsql )
-        { }
-
-        void addField(int order, const QString& wfield,const QString& wtype);
-
-        QString getname() const { return name; }
-        QString getsql() const { return sql; }
-        fieldMap fldmap;
+{
+public:
+    DBBrowserTable() : name( "" ) { }
+    DBBrowserTable( const QString& wname,const QString& wsql )
+    : name( wname), sql( wsql )
+    { }
+    
+    void addField(int order, const QString& wfield,const QString& wtype);
+    
+    QString getname() const { return name; }
+    QString getsql() const { return sql; }
+    fieldMap fldmap;
 private:
-        QString name;
-        QString sql;
- };
+    QString name;
+    QString sql;
+};
 
 
 class DBBrowserDB
 {
 public:
- DBBrowserDB (): _db( 0 ) , hasValidBrowseSet(false), curEncoding(kEncodingUTF8) {}
- ~DBBrowserDB (){}
- bool open ( const QString & db);
- bool create ( const QString & db);
- void close ();
- bool compact ();
- bool setRestorePoint();
- bool save ();
- bool revert ();
- bool dump( const QString & filename);
- bool reload( const QString & filename, int * lineErr);
- bool executeSQL ( const QString & statement);
- bool executeSQLDirect ( const QString & statement);
- void updateSchema() ;
- bool addRecord();
- bool deleteRecord(int wrow);
- bool updateRecord(int wrow, int wcol, const QString & wtext);
- bool browseTable( const QString & tablename );
- QStringList getTableFields(const QString & tablename);
- QStringList getTableTypes(const QString & tablename);
- QStringList getTableNames();
- QStringList getIndexNames();
- resultMap getFindResults( const QString & wstatement);
- int getRecordCount();
- bool isOpen();
- void setDirty(bool dirtyval);
- void setDirtyDirect(bool dirtyval);
- bool getDirty();
- void logSQL(QString statement, int msgtype);
-                void setEncoding( int encoding );
- void setDefaultNewData( const QString & data );
- QString GetEncodedQString( const QString & input);
- QString GetDecodedQString( const QString & input);
- sqlite3 * _db;
-
-
+    DBBrowserDB (): _db( 0 ) , hasValidBrowseSet(false), curEncoding(kEncodingUTF8) {}
+    ~DBBrowserDB (){}
+    bool open ( const QString & db);
+    bool create ( const QString & db);
+    void close ();
+    bool compact ();
+    bool setRestorePoint();
+    bool save ();
+    bool revert ();
+    bool dump( const QString & filename);
+    bool reload( const QString & filename, int * lineErr);
+    bool executeSQL ( const QString & statement);
+    bool executeSQLDirect ( const QString & statement);
+    void updateSchema() ;
+    bool addRecord();
+    bool deleteRecord(int wrow);
+    bool updateRecord(int wrow, int wcol, const QString & wtext);
+    bool browseTable( const QString & tablename );
+    QStringList getTableFields(const QString & tablename);
+    QStringList getTableTypes(const QString & tablename);
+    QStringList getTableNames();
+    QStringList getIndexNames();
+    resultMap getFindResults( const QString & wstatement);
+    int getRecordCount();
+    bool isOpen();
+    void setDirty(bool dirtyval);
+    void setDirtyDirect(bool dirtyval);
+    bool getDirty();
+    void logSQL(QString statement, int msgtype);
+    void setEncoding( int encoding );
+    void setDefaultNewData( const QString & data );
+    QString GetEncodedQString( const QString & input);
+    QString GetDecodedQString( const QString & input);
+    sqlite3 * _db;
+    
+    
 	QStringList decodeCSV(const QString & csvfilename, char sep, char quote,  int maxrecords, int * numfields);
-
+    
 	tableMap tbmap;
 	indexMap idxmap;
 	rowIdMap idmap;
@@ -137,14 +137,14 @@ public:
 	QString curBrowseTableName;
 	QString lastErrorMessage;
 	QString curDBFilename;
- int curEncoding;
- QString curNewData;
+    int curEncoding;
+    QString curNewData;
 	
 	sqlLogForm * logWin;
 	
-
-	private:
-	    bool dirty;
+    
+private:
+    bool dirty;
 	void getTableRecords( const QString & tablename );
 	
 	
