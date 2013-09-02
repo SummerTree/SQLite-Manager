@@ -20,9 +20,7 @@
 		E59D161D17D4CE3100782F8B /* aboutform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15D417D4CE3100782F8B /* aboutform.cpp */; };
 		E59D161E17D4CE3100782F8B /* addfieldform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15D617D4CE3100782F8B /* addfieldform.cpp */; };
 		E59D161F17D4CE3100782F8B /* addfieldtypeform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15D817D4CE3100782F8B /* addfieldtypeform.cpp */; };
-		E59D162017D4CE3100782F8B /* app.plist in Resources */ = {isa = PBXBuildFile; fileRef = E59D15DA17D4CE3100782F8B /* app.plist */; };
 		E59D162117D4CE3100782F8B /* browsermain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15DB17D4CE3100782F8B /* browsermain.cpp */; };
-		E59D162217D4CE3100782F8B /* building in Resources */ = {isa = PBXBuildFile; fileRef = E59D15DC17D4CE3100782F8B /* building */; };
 		E59D162317D4CE3100782F8B /* choosetableform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15DD17D4CE3100782F8B /* choosetableform.cpp */; };
 		E59D162417D4CE3100782F8B /* createindexform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15DF17D4CE3100782F8B /* createindexform.cpp */; };
 		E59D162517D4CE3100782F8B /* createtableform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15E117D4CE3100782F8B /* createtableform.cpp */; };
@@ -54,12 +52,10 @@
 		E59D163F17D4CE3100782F8B /* importcsvform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D160717D4CE3100782F8B /* importcsvform.cpp */; };
 		E59D164017D4CE3100782F8B /* LICENSING in Resources */ = {isa = PBXBuildFile; fileRef = E59D160917D4CE3100782F8B /* LICENSING */; };
 		E59D164117D4CE3100782F8B /* macapp.icns in Resources */ = {isa = PBXBuildFile; fileRef = E59D160A17D4CE3100782F8B /* macapp.icns */; };
-		E59D164217D4CE3100782F8B /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = E59D160B17D4CE3100782F8B /* Makefile */; };
 		E59D164317D4CE3100782F8B /* preferencesform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D160C17D4CE3100782F8B /* preferencesform.cpp */; };
 		E59D164417D4CE3100782F8B /* renametableform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D160E17D4CE3100782F8B /* renametableform.cpp */; };
 		E59D164517D4CE3100782F8B /* sqlbrowser_util.c in Sources */ = {isa = PBXBuildFile; fileRef = E59D161017D4CE3100782F8B /* sqlbrowser_util.c */; };
 		E59D164617D4CE3100782F8B /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = E59D161317D4CE3100782F8B /* sqlite3.c */; };
-		E59D164717D4CE3100782F8B /* sqlitebrowser.pro in Resources */ = {isa = PBXBuildFile; fileRef = E59D161617D4CE3100782F8B /* sqlitebrowser.pro */; };
 		E59D164817D4CE3100782F8B /* sqlitedb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D161817D4CE3100782F8B /* sqlitedb.cpp */; };
 		E59D164917D4CE3100782F8B /* sqllogform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D161A17D4CE3100782F8B /* sqllogform.cpp */; };
 		E59D164A17D4CE3100782F8B /* winapp.rc in Resources */ = {isa = PBXBuildFile; fileRef = E59D161C17D4CE3100782F8B /* winapp.rc */; };
@@ -101,9 +97,7 @@
 		E59D15D717D4CE3100782F8B /* addfieldform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addfieldform.h; sourceTree = "<group>"; };
 		E59D15D817D4CE3100782F8B /* addfieldtypeform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = addfieldtypeform.cpp; sourceTree = "<group>"; };
 		E59D15D917D4CE3100782F8B /* addfieldtypeform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addfieldtypeform.h; sourceTree = "<group>"; };
-		E59D15DA17D4CE3100782F8B /* app.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = app.plist; sourceTree = "<group>"; };
 		E59D15DB17D4CE3100782F8B /* browsermain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = browsermain.cpp; sourceTree = "<group>"; };
-		E59D15DC17D4CE3100782F8B /* building */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = building; sourceTree = "<group>"; };
 		E59D15DD17D4CE3100782F8B /* choosetableform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = choosetableform.cpp; sourceTree = "<group>"; };
 		E59D15DE17D4CE3100782F8B /* choosetableform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = choosetableform.h; sourceTree = "<group>"; };
 		E59D15DF17D4CE3100782F8B /* createindexform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = createindexform.cpp; sourceTree = "<group>"; };
@@ -149,7 +143,6 @@
 		E59D160817D4CE3100782F8B /* importcsvform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = importcsvform.h; sourceTree = "<group>"; };
 		E59D160917D4CE3100782F8B /* LICENSING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSING; sourceTree = "<group>"; };
 		E59D160A17D4CE3100782F8B /* macapp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = macapp.icns; sourceTree = "<group>"; };
-		E59D160B17D4CE3100782F8B /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		E59D160C17D4CE3100782F8B /* preferencesform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = preferencesform.cpp; sourceTree = "<group>"; };
 		E59D160D17D4CE3100782F8B /* preferencesform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = preferencesform.h; sourceTree = "<group>"; };
 		E59D160E17D4CE3100782F8B /* renametableform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = renametableform.cpp; sourceTree = "<group>"; };
@@ -159,7 +152,6 @@
 		E59D161317D4CE3100782F8B /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
 		E59D161417D4CE3100782F8B /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
 		E59D161517D4CE3100782F8B /* sqlite3ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3ext.h; sourceTree = "<group>"; };
-		E59D161617D4CE3100782F8B /* sqlitebrowser.pro */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sqlitebrowser.pro; sourceTree = "<group>"; };
 		E59D161717D4CE3100782F8B /* sqlitebrowsertypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlitebrowsertypes.h; sourceTree = "<group>"; };
 		E59D161817D4CE3100782F8B /* sqlitedb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqlitedb.cpp; sourceTree = "<group>"; };
 		E59D161917D4CE3100782F8B /* sqlitedb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlitedb.h; sourceTree = "<group>"; };
@@ -274,18 +266,13 @@
 		E59D15D017D4CE3100782F8B /* sqlitebrowser */ = {
 			isa = PBXGroup;
 			children = (
-				E59D15D117D4CE3100782F8B /* .moc */,
-				E59D15D217D4CE3100782F8B /* .obj */,
-				E59D15D317D4CE3100782F8B /* .ui */,
 				E59D15D417D4CE3100782F8B /* aboutform.cpp */,
 				E59D15D517D4CE3100782F8B /* aboutform.h */,
 				E59D15D617D4CE3100782F8B /* addfieldform.cpp */,
 				E59D15D717D4CE3100782F8B /* addfieldform.h */,
 				E59D15D817D4CE3100782F8B /* addfieldtypeform.cpp */,
 				E59D15D917D4CE3100782F8B /* addfieldtypeform.h */,
-				E59D15DA17D4CE3100782F8B /* app.plist */,
 				E59D15DB17D4CE3100782F8B /* browsermain.cpp */,
-				E59D15DC17D4CE3100782F8B /* building */,
 				E59D15DD17D4CE3100782F8B /* choosetableform.cpp */,
 				E59D15DE17D4CE3100782F8B /* choosetableform.h */,
 				E59D15DF17D4CE3100782F8B /* createindexform.cpp */,
@@ -318,7 +305,6 @@
 				E59D160817D4CE3100782F8B /* importcsvform.h */,
 				E59D160917D4CE3100782F8B /* LICENSING */,
 				E59D160A17D4CE3100782F8B /* macapp.icns */,
-				E59D160B17D4CE3100782F8B /* Makefile */,
 				E59D160C17D4CE3100782F8B /* preferencesform.cpp */,
 				E59D160D17D4CE3100782F8B /* preferencesform.h */,
 				E59D160E17D4CE3100782F8B /* renametableform.cpp */,
@@ -326,7 +312,6 @@
 				E59D161017D4CE3100782F8B /* sqlbrowser_util.c */,
 				E59D161117D4CE3100782F8B /* sqlbrowser_util.h */,
 				E59D161217D4CE3100782F8B /* sqlite_source */,
-				E59D161617D4CE3100782F8B /* sqlitebrowser.pro */,
 				E59D161717D4CE3100782F8B /* sqlitebrowsertypes.h */,
 				E59D161817D4CE3100782F8B /* sqlitedb.cpp */,
 				E59D161917D4CE3100782F8B /* sqlitedb.h */,
@@ -335,27 +320,6 @@
 				E59D161C17D4CE3100782F8B /* winapp.rc */,
 			);
 			path = sqlitebrowser;
-			sourceTree = "<group>";
-		};
-		E59D15D117D4CE3100782F8B /* .moc */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = .moc;
-			sourceTree = "<group>";
-		};
-		E59D15D217D4CE3100782F8B /* .obj */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = .obj;
-			sourceTree = "<group>";
-		};
-		E59D15D317D4CE3100782F8B /* .ui */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = .ui;
 			sourceTree = "<group>";
 		};
 		E59D15F817D4CE3100782F8B /* images */ = {
@@ -463,8 +427,6 @@
 				E59D152C17D4CB3700782F8B /* InfoPlist.strings in Resources */,
 				E59D153217D4CB3700782F8B /* Credits.rtf in Resources */,
 				E59D153817D4CB3700782F8B /* MainMenu.xib in Resources */,
-				E59D162017D4CE3100782F8B /* app.plist in Resources */,
-				E59D162217D4CE3100782F8B /* building in Resources */,
 				E59D163017D4CE3100782F8B /* iconwin.ico in Resources */,
 				E59D163117D4CE3100782F8B /* 128.png in Resources */,
 				E59D163217D4CE3100782F8B /* create_index.png in Resources */,
@@ -482,7 +444,6 @@
 				E59D163E17D4CE3100782F8B /* whatis.png in Resources */,
 				E59D164017D4CE3100782F8B /* LICENSING in Resources */,
 				E59D164117D4CE3100782F8B /* macapp.icns in Resources */,
-				E59D164717D4CE3100782F8B /* sqlitebrowser.pro in Resources */,
 				E59D164A17D4CE3100782F8B /* winapp.rc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,7 +499,6 @@
 				E59D162E17D4CE3100782F8B /* findform.cpp in Sources */,
 				E59D162F17D4CE3100782F8B /* form1.cpp in Sources */,
 				E59D163F17D4CE3100782F8B /* importcsvform.cpp in Sources */,
-				E59D164217D4CE3100782F8B /* Makefile in Sources */,
 				E59D164317D4CE3100782F8B /* preferencesform.cpp in Sources */,
 				E59D164417D4CE3100782F8B /* renametableform.cpp in Sources */,
 				E59D164517D4CE3100782F8B /* sqlbrowser_util.c in Sources */,
