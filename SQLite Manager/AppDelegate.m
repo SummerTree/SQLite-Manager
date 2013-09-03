@@ -11,6 +11,8 @@
 
 @implementation AppDelegate
 
+@synthesize tableView = _tableView;
+
 @synthesize windowController = _windowController;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification

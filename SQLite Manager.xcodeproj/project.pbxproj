@@ -57,6 +57,10 @@
 		E52C8FE817D5D5BA00702164 /* SQLite Manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "SQLite Manager.entitlements"; sourceTree = "<group>"; };
 		E56DBFE817D5C6B600232BC6 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
 		E56DBFE917D5C6B600232BC6 /* MainWindowController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainWindowController.mm; sourceTree = "<group>"; };
+		E58335F617D634BA00715502 /* utarray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utarray.h; sourceTree = "<group>"; };
+		E58335F717D634BA00715502 /* uthash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uthash.h; sourceTree = "<group>"; };
+		E58335F817D634BA00715502 /* utlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utlist.h; sourceTree = "<group>"; };
+		E58335F917D634BA00715502 /* utstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utstring.h; sourceTree = "<group>"; };
 		E59D151E17D4CB3700782F8B /* SQLite Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SQLite Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E59D152117D4CB3700782F8B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E59D152417D4CB3700782F8B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -170,9 +174,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E58335F517D634BA00715502 /* uthash */ = {
+			isa = PBXGroup;
+			children = (
+				E58335F617D634BA00715502 /* utarray.h */,
+				E58335F717D634BA00715502 /* uthash.h */,
+				E58335F817D634BA00715502 /* utlist.h */,
+				E58335F917D634BA00715502 /* utstring.h */,
+			);
+			name = uthash;
+			path = uthash/src;
+			sourceTree = "<group>";
+		};
 		E59D151517D4CB3600782F8B = {
 			isa = PBXGroup;
 			children = (
+				E58335F517D634BA00715502 /* uthash */,
 				E59D15D017D4CE3100782F8B /* sqlitebrowser */,
 				E59D152717D4CB3700782F8B /* SQLite Manager */,
 				E59D154417D4CB3700782F8B /* SQLite ManagerTests */,

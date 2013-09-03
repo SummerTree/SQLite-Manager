@@ -10,4 +10,6 @@
 
 @interface MainWindowController : NSWindowController
 
+@property (nonatomic, strong) IBOutlet NSTableView *tableView;
+
 @end

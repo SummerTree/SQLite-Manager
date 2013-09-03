@@ -14,6 +14,8 @@
 
 @property (assign) IBOutlet NSWindow *window;
 
+@property (nonatomic, strong) IBOutlet NSTableView *tableView;
+
 @property (nonatomic, strong) MainWindowController *windowController;
 
 @end
