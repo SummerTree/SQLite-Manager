@@ -10,6 +10,22 @@
 #import "MainWindowController.h"
 #import "sqlitedb.h"
 
+@interface TableObject : NSObject
+
+@property (nonatomic, retain) NSString *name;
+
+@property (nonatomic, retain) NSString *sql;
+
+@end
+
+@implementation TableObject
+
+@synthesize name;
+
+@synthesize sql;
+
+@end
+
 @interface MainWindowController () <NSTableViewDelegate, NSTableViewDataSource>
 {
     DBBrowserDB _db;
@@ -86,7 +102,11 @@
     for ( it = tmap.begin(); it != tmap.end(); ++it ) {
 //        Q3ListViewItem * tbitem = new Q3ListViewItem( dblistView, lasttbitem );
         //tbitem->setOpen( TRUE );
-        [_tableNames addObject:[NSString stringWithUTF8String:it->second.getname().c_str()]];
+        TableObject *obj = [[TableObject alloc] init];
+        obj.name = [NSString stringWithUTF8String:it->second.getname().c_str()];
+        obj.sql = [NSString stringWithUTF8String:it->second.getsql().c_str()];
+        [_tableNames addObject:obj];
+//        [_tableNames addObject:[NSString stringWithUTF8String:it->second.getname().c_str()]];
         /*
         tbitem->setText( 0, it.data().getname() );
         tbitem->setText( 1,  "table" );
@@ -108,7 +128,10 @@
     indexMap::iterator it2;
     indexMap imap = _db.idxmap;
     for ( it2 = imap.begin(); it2 != imap.end(); ++it2 ) {
-        [_tableNames addObject:[NSString stringWithUTF8String:it2->second.getname().c_str()]];
+        TableObject *obj = [[TableObject alloc] init];
+        obj.name = [NSString stringWithUTF8String:it2->second.getname().c_str()];
+        obj.sql = [NSString stringWithUTF8String:it2->second.getsql().c_str()];
+        [_tableNames addObject:obj];
         /*
         Q3ListViewItem * item = new Q3ListViewItem( dblistView, lasttbitem );
         item->setText( 0, it2.data().getname());
@@ -117,6 +140,8 @@
         lasttbitem = item ;
          */
     }
+    
+    NSLog(@"tablenames %@", _tableNames);
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
@@ -128,7 +153,16 @@
  */
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-    return [_tableNames objectAtIndex:row];
+    TableObject *obj = [_tableNames objectAtIndex:row];
+    
+    if ([tableColumn.identifier isEqualToString:@"name"]) {
+        return obj.name;
+    }
+    else if ([tableColumn.identifier isEqualToString:@"sql"])
+    {
+        return obj.sql;
+    }
+    return @"";//[_tableNames objectAtIndex:row];
 }
 
 #pragma mark -

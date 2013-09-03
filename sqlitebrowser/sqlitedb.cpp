@@ -646,7 +646,6 @@ void DBBrowserDB::updateSchema( )
     const char *tail;
     vector<string> r;
     int err=0;
-    string num;
     int idxnum =0;
     int tabnum = 0;
     
@@ -663,12 +662,10 @@ void DBBrowserDB::updateSchema( )
     if (err == SQLITE_OK){
         logSQL(statement, kLogMsg_App);
         while ( sqlite3_step(vm) == SQLITE_ROW ){
-            //TODO:FIX
-//            num.setNum(tabnum);
             string  val1, val2;
-            val1 = string((const char *) sqlite3_column_text(vm, 0));
-            val2 = string((const char *) sqlite3_column_text(vm, 1));
-            tbmap[num] = DBBrowserTable(GetDecodedQString(val1), GetDecodedQString(val2));
+            val1 = string((const char *) sqlite3_column_text(vm, 0)?:"");
+            val2 = string((const char *) sqlite3_column_text(vm, 1)?:"");
+            tbmap[tabnum] = DBBrowserTable(GetDecodedQString(val1), GetDecodedQString(val2));
             tabnum++;
         }
         sqlite3_finalize(vm);
@@ -718,11 +715,9 @@ void DBBrowserDB::updateSchema( )
     if (err == SQLITE_OK){
         while ( sqlite3_step(vm) == SQLITE_ROW ){
             string  val1, val2;
-            val1 = string((const char *) sqlite3_column_text(vm, 0));
-            val2 = string((const char *) sqlite3_column_text(vm, 1));
-            //TODO:FIX
-//            num.setNum(idxnum);
-            idxmap[num] = DBBrowserIndex(GetDecodedQString(val1),GetDecodedQString(val2));
+            val1 = string((const char *) sqlite3_column_text(vm, 0)?:"");
+            val2 = string((const char *) sqlite3_column_text(vm, 1)?:"");
+            idxmap[idxnum] = DBBrowserIndex(GetDecodedQString(val1),GetDecodedQString(val2));
             idxnum ++;
         }
         sqlite3_finalize(vm);

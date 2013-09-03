@@ -36,8 +36,8 @@ static string aboutText = string("Version 2.0\n\nSQLite Database Browser is a fr
 
 
 typedef map<int, class DBBrowserField> fieldMap;
-typedef map<string, class DBBrowserTable> tableMap;
-typedef map<string, class DBBrowserIndex> indexMap;
+typedef map<int, class DBBrowserTable> tableMap;
+typedef map<int, class DBBrowserIndex> indexMap;
 typedef map<int, int> rowIdMap;
 
 typedef vector<vector<string>> rowList;
