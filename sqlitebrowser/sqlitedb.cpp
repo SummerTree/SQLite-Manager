@@ -466,7 +466,7 @@ void DBBrowserDB::getTableRecords( const string & tablename )
     statement.append(" ORDER BY rowid; ");
     //qDebug(statement);
     logSQL(statement, kLogMsg_App);
-    err=sqlite3_prepare(_db,statement.c_str(),statement.length(),
+    err=sqlite3_prepare(_db,statement.c_str(),statement.size(),
                         &vm, &tail);
     if (err == SQLITE_OK){
         int rownum = 0;
@@ -508,7 +508,7 @@ resultMap DBBrowserDB::getFindResults( const string & wstatement)
     lastErrorMessage = string("no error");
     string encstatement = GetEncodedQString(wstatement);
     logSQL(encstatement, kLogMsg_App);
-    err=sqlite3_prepare(_db,encstatement.c_str(),encstatement.length(),
+    err=sqlite3_prepare(_db,encstatement.c_str(),encstatement.size(),
                         &vm, &tail);
     if (err == SQLITE_OK){
         int rownum = 0;
@@ -658,7 +658,7 @@ void DBBrowserDB::updateSchema( )
     "FROM sqlite_master "
     "WHERE type='table' ;";
     
-    err=sqlite3_prepare(_db, statement.c_str(),statement.length(),
+    err=sqlite3_prepare(_db, statement.c_str(),statement.size(),
                         &vm, &tail);
     if (err == SQLITE_OK){
         logSQL(statement, kLogMsg_App);
@@ -683,7 +683,7 @@ void DBBrowserDB::updateSchema( )
         statement.append( GetEncodedQString(it->second.getname()));
         statement.append(");");
         logSQL(statement, kLogMsg_App);
-        err=sqlite3_prepare(_db,statement.c_str(),statement.length(),
+        err=sqlite3_prepare(_db,statement.c_str(),statement.size(),
                             &vm, &tail);
         if (err == SQLITE_OK){
             it->second.fldmap.clear();
@@ -712,7 +712,7 @@ void DBBrowserDB::updateSchema( )
     "WHERE type='index' ";
     /*"ORDER BY name;"*/
     //finally get indices
-    err=sqlite3_prepare(_db,statement.c_str(),statement.length(),
+    err=sqlite3_prepare(_db,statement.c_str(), -1/*statement.size()*/,
                         &vm, &tail);
     logSQL(statement, kLogMsg_App);
     if (err == SQLITE_OK){
