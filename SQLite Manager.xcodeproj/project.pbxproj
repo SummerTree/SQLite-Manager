@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E56DBFEB17D5C6B600232BC6 /* MainWindowController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E56DBFE917D5C6B600232BC6 /* MainWindowController.mm */; };
 		E59D152217D4CB3700782F8B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59D152117D4CB3700782F8B /* Cocoa.framework */; };
 		E59D152C17D4CB3700782F8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E59D152A17D4CB3700782F8B /* InfoPlist.strings */; };
 		E59D152E17D4CB3700782F8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E59D152D17D4CB3700782F8B /* main.m */; };
@@ -17,23 +18,6 @@
 		E59D154117D4CB3700782F8B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59D152117D4CB3700782F8B /* Cocoa.framework */; };
 		E59D154917D4CB3700782F8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E59D154717D4CB3700782F8B /* InfoPlist.strings */; };
 		E59D154C17D4CB3700782F8B /* SQLite_ManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E59D154B17D4CB3700782F8B /* SQLite_ManagerTests.m */; };
-		E59D161D17D4CE3100782F8B /* aboutform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15D417D4CE3100782F8B /* aboutform.cpp */; };
-		E59D161E17D4CE3100782F8B /* addfieldform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15D617D4CE3100782F8B /* addfieldform.cpp */; };
-		E59D161F17D4CE3100782F8B /* addfieldtypeform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15D817D4CE3100782F8B /* addfieldtypeform.cpp */; };
-		E59D162117D4CE3100782F8B /* browsermain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15DB17D4CE3100782F8B /* browsermain.cpp */; };
-		E59D162317D4CE3100782F8B /* choosetableform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15DD17D4CE3100782F8B /* choosetableform.cpp */; };
-		E59D162417D4CE3100782F8B /* createindexform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15DF17D4CE3100782F8B /* createindexform.cpp */; };
-		E59D162517D4CE3100782F8B /* createtableform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15E117D4CE3100782F8B /* createtableform.cpp */; };
-		E59D162617D4CE3100782F8B /* deleteindexform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15E317D4CE3100782F8B /* deleteindexform.cpp */; };
-		E59D162717D4CE3100782F8B /* deletetableform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15E517D4CE3100782F8B /* deletetableform.cpp */; };
-		E59D162817D4CE3100782F8B /* editfieldform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15E717D4CE3100782F8B /* editfieldform.cpp */; };
-		E59D162917D4CE3100782F8B /* editform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15E917D4CE3100782F8B /* editform.cpp */; };
-		E59D162A17D4CE3100782F8B /* editformwindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15EB17D4CE3100782F8B /* editformwindow.cpp */; };
-		E59D162B17D4CE3100782F8B /* edittableform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15ED17D4CE3100782F8B /* edittableform.cpp */; };
-		E59D162C17D4CE3100782F8B /* exporttablecsvform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15EF17D4CE3100782F8B /* exporttablecsvform.cpp */; };
-		E59D162D17D4CE3100782F8B /* extendedmainform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15F117D4CE3100782F8B /* extendedmainform.cpp */; };
-		E59D162E17D4CE3100782F8B /* findform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15F317D4CE3100782F8B /* findform.cpp */; };
-		E59D162F17D4CE3100782F8B /* form1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D15F517D4CE3100782F8B /* form1.cpp */; };
 		E59D163017D4CE3100782F8B /* iconwin.ico in Resources */ = {isa = PBXBuildFile; fileRef = E59D15F717D4CE3100782F8B /* iconwin.ico */; };
 		E59D163117D4CE3100782F8B /* 128.png in Resources */ = {isa = PBXBuildFile; fileRef = E59D15F917D4CE3100782F8B /* 128.png */; };
 		E59D163217D4CE3100782F8B /* create_index.png in Resources */ = {isa = PBXBuildFile; fileRef = E59D15FA17D4CE3100782F8B /* create_index.png */; };
@@ -49,16 +33,14 @@
 		E59D163C17D4CE3100782F8B /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = E59D160417D4CE3100782F8B /* save.png */; };
 		E59D163D17D4CE3100782F8B /* searchfind.png in Resources */ = {isa = PBXBuildFile; fileRef = E59D160517D4CE3100782F8B /* searchfind.png */; };
 		E59D163E17D4CE3100782F8B /* whatis.png in Resources */ = {isa = PBXBuildFile; fileRef = E59D160617D4CE3100782F8B /* whatis.png */; };
-		E59D163F17D4CE3100782F8B /* importcsvform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D160717D4CE3100782F8B /* importcsvform.cpp */; };
 		E59D164017D4CE3100782F8B /* LICENSING in Resources */ = {isa = PBXBuildFile; fileRef = E59D160917D4CE3100782F8B /* LICENSING */; };
 		E59D164117D4CE3100782F8B /* macapp.icns in Resources */ = {isa = PBXBuildFile; fileRef = E59D160A17D4CE3100782F8B /* macapp.icns */; };
-		E59D164317D4CE3100782F8B /* preferencesform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D160C17D4CE3100782F8B /* preferencesform.cpp */; };
-		E59D164417D4CE3100782F8B /* renametableform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D160E17D4CE3100782F8B /* renametableform.cpp */; };
 		E59D164517D4CE3100782F8B /* sqlbrowser_util.c in Sources */ = {isa = PBXBuildFile; fileRef = E59D161017D4CE3100782F8B /* sqlbrowser_util.c */; };
 		E59D164617D4CE3100782F8B /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = E59D161317D4CE3100782F8B /* sqlite3.c */; };
-		E59D164817D4CE3100782F8B /* sqlitedb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D161817D4CE3100782F8B /* sqlitedb.cpp */; };
-		E59D164917D4CE3100782F8B /* sqllogform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D161A17D4CE3100782F8B /* sqllogform.cpp */; };
 		E59D164A17D4CE3100782F8B /* winapp.rc in Resources */ = {isa = PBXBuildFile; fileRef = E59D161C17D4CE3100782F8B /* winapp.rc */; };
+		E59D164B17D4CF7800782F8B /* sqlitedb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D161817D4CE3100782F8B /* sqlitedb.cpp */; };
+		E59D164E17D4D16500782F8B /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E59D164C17D4D13900782F8B /* libstdc++.6.0.9.dylib */; };
+		E59D165017D4D33A00782F8B /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E59D164F17D4D33A00782F8B /* libc++.1.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E52C8FE817D5D5BA00702164 /* SQLite Manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "SQLite Manager.entitlements"; sourceTree = "<group>"; };
+		E56DBFE817D5C6B600232BC6 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		E56DBFE917D5C6B600232BC6 /* MainWindowController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainWindowController.mm; sourceTree = "<group>"; };
 		E59D151E17D4CB3700782F8B /* SQLite Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SQLite Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E59D152117D4CB3700782F8B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E59D152417D4CB3700782F8B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -158,6 +143,8 @@
 		E59D161A17D4CE3100782F8B /* sqllogform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sqllogform.cpp; sourceTree = "<group>"; };
 		E59D161B17D4CE3100782F8B /* sqllogform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqllogform.h; sourceTree = "<group>"; };
 		E59D161C17D4CE3100782F8B /* winapp.rc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = winapp.rc; sourceTree = "<group>"; };
+		E59D164C17D4D13900782F8B /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		E59D164F17D4D33A00782F8B /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "usr/lib/libc++.1.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +152,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E59D165017D4D33A00782F8B /* libc++.1.dylib in Frameworks */,
+				E59D164E17D4D16500782F8B /* libstdc++.6.0.9.dylib in Frameworks */,
 				E59D152217D4CB3700782F8B /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +193,8 @@
 		E59D152017D4CB3700782F8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E59D164C17D4D13900782F8B /* libstdc++.6.0.9.dylib */,
+				E59D164F17D4D33A00782F8B /* libc++.1.dylib */,
 				E59D152117D4CB3700782F8B /* Cocoa.framework */,
 				E59D153F17D4CB3700782F8B /* SenTestingKit.framework */,
 				E59D152317D4CB3700782F8B /* Other Frameworks */,
@@ -224,10 +215,13 @@
 		E59D152717D4CB3700782F8B /* SQLite Manager */ = {
 			isa = PBXGroup;
 			children = (
+				E52C8FE817D5D5BA00702164 /* SQLite Manager.entitlements */,
 				E59D153317D4CB3700782F8B /* AppDelegate.h */,
 				E59D153417D4CB3700782F8B /* AppDelegate.m */,
 				E59D153617D4CB3700782F8B /* MainMenu.xib */,
 				E59D152817D4CB3700782F8B /* Supporting Files */,
+				E56DBFE817D5C6B600232BC6 /* MainWindowController.h */,
+				E56DBFE917D5C6B600232BC6 /* MainWindowController.mm */,
 			);
 			path = "SQLite Manager";
 			sourceTree = "<group>";
@@ -481,30 +475,10 @@
 			files = (
 				E59D152E17D4CB3700782F8B /* main.m in Sources */,
 				E59D153517D4CB3700782F8B /* AppDelegate.m in Sources */,
-				E59D161D17D4CE3100782F8B /* aboutform.cpp in Sources */,
-				E59D161E17D4CE3100782F8B /* addfieldform.cpp in Sources */,
-				E59D161F17D4CE3100782F8B /* addfieldtypeform.cpp in Sources */,
-				E59D162117D4CE3100782F8B /* browsermain.cpp in Sources */,
-				E59D162317D4CE3100782F8B /* choosetableform.cpp in Sources */,
-				E59D162417D4CE3100782F8B /* createindexform.cpp in Sources */,
-				E59D162517D4CE3100782F8B /* createtableform.cpp in Sources */,
-				E59D162617D4CE3100782F8B /* deleteindexform.cpp in Sources */,
-				E59D162717D4CE3100782F8B /* deletetableform.cpp in Sources */,
-				E59D162817D4CE3100782F8B /* editfieldform.cpp in Sources */,
-				E59D162917D4CE3100782F8B /* editform.cpp in Sources */,
-				E59D162A17D4CE3100782F8B /* editformwindow.cpp in Sources */,
-				E59D162B17D4CE3100782F8B /* edittableform.cpp in Sources */,
-				E59D162C17D4CE3100782F8B /* exporttablecsvform.cpp in Sources */,
-				E59D162D17D4CE3100782F8B /* extendedmainform.cpp in Sources */,
-				E59D162E17D4CE3100782F8B /* findform.cpp in Sources */,
-				E59D162F17D4CE3100782F8B /* form1.cpp in Sources */,
-				E59D163F17D4CE3100782F8B /* importcsvform.cpp in Sources */,
-				E59D164317D4CE3100782F8B /* preferencesform.cpp in Sources */,
-				E59D164417D4CE3100782F8B /* renametableform.cpp in Sources */,
 				E59D164517D4CE3100782F8B /* sqlbrowser_util.c in Sources */,
 				E59D164617D4CE3100782F8B /* sqlite3.c in Sources */,
-				E59D164817D4CE3100782F8B /* sqlitedb.cpp in Sources */,
-				E59D164917D4CE3100782F8B /* sqllogform.cpp in Sources */,
+				E59D164B17D4CF7800782F8B /* sqlitedb.cpp in Sources */,
+				E56DBFEB17D5C6B600232BC6 /* MainWindowController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +598,7 @@
 		E59D155017D4CB3700782F8B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SQLite Manager/SQLite Manager-Prefix.pch";
@@ -636,6 +611,7 @@
 		E59D155117D4CB3700782F8B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SQLite Manager/SQLite Manager-Prefix.pch";
@@ -694,6 +670,7 @@
 				E59D155117D4CB3700782F8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E59D155217D4CB3700782F8B /* Build configuration list for PBXNativeTarget "SQLite ManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -702,6 +679,7 @@
 				E59D155417D4CB3700782F8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
