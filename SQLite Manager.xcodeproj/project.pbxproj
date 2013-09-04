@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E51DB60B17D6F32D005322A3 /* SidebarTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = E51DB60A17D6F32D005322A3 /* SidebarTableCellView.m */; };
 		E56DBFEB17D5C6B600232BC6 /* MainWindowController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E56DBFE917D5C6B600232BC6 /* MainWindowController.mm */; };
 		E59D152217D4CB3700782F8B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59D152117D4CB3700782F8B /* Cocoa.framework */; };
 		E59D152C17D4CB3700782F8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E59D152A17D4CB3700782F8B /* InfoPlist.strings */; };
@@ -54,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E51DB60917D6F32D005322A3 /* SidebarTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarTableCellView.h; sourceTree = "<group>"; };
+		E51DB60A17D6F32D005322A3 /* SidebarTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableCellView.m; sourceTree = "<group>"; };
 		E52C8FE817D5D5BA00702164 /* SQLite Manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "SQLite Manager.entitlements"; sourceTree = "<group>"; };
 		E56DBFE817D5C6B600232BC6 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
 		E56DBFE917D5C6B600232BC6 /* MainWindowController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainWindowController.mm; sourceTree = "<group>"; };
@@ -232,6 +235,8 @@
 		E59D152717D4CB3700782F8B /* SQLite Manager */ = {
 			isa = PBXGroup;
 			children = (
+				E51DB60917D6F32D005322A3 /* SidebarTableCellView.h */,
+				E51DB60A17D6F32D005322A3 /* SidebarTableCellView.m */,
 				E52C8FE817D5D5BA00702164 /* SQLite Manager.entitlements */,
 				E59D153317D4CB3700782F8B /* AppDelegate.h */,
 				E59D153417D4CB3700782F8B /* AppDelegate.m */,
@@ -496,6 +501,7 @@
 				E59D164617D4CE3100782F8B /* sqlite3.c in Sources */,
 				E59D164B17D4CF7800782F8B /* sqlitedb.cpp in Sources */,
 				E56DBFEB17D5C6B600232BC6 /* MainWindowController.mm in Sources */,
+				E51DB60B17D6F32D005322A3 /* SidebarTableCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

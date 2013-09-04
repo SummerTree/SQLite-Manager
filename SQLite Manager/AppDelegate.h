@@ -10,9 +10,11 @@
 
 @class MainWindowController;
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSOutlineViewDelegate, NSOutlineViewDataSource>
 
 @property (assign) IBOutlet NSWindow *window;
+
+@property (nonatomic, strong) IBOutlet NSOutlineView *sidebarOutlineView;
 
 @property (nonatomic, strong) IBOutlet NSTableView *tableView;
 
