@@ -42,6 +42,7 @@
 		E59D164B17D4CF7800782F8B /* sqlitedb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59D161817D4CE3100782F8B /* sqlitedb.cpp */; };
 		E59D164E17D4D16500782F8B /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E59D164C17D4D13900782F8B /* libstdc++.6.0.9.dylib */; };
 		E59D165017D4D33A00782F8B /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E59D164F17D4D33A00782F8B /* libc++.1.dylib */; };
+		E5ACAF3117D77FAC00F24B04 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5ACAF3017D77FAC00F24B04 /* MainWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +153,7 @@
 		E59D161C17D4CE3100782F8B /* winapp.rc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = winapp.rc; sourceTree = "<group>"; };
 		E59D164C17D4D13900782F8B /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		E59D164F17D4D33A00782F8B /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "usr/lib/libc++.1.dylib"; sourceTree = SDKROOT; };
+		E5ACAF3017D77FAC00F24B04 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 				E59D152817D4CB3700782F8B /* Supporting Files */,
 				E56DBFE817D5C6B600232BC6 /* MainWindowController.h */,
 				E56DBFE917D5C6B600232BC6 /* MainWindowController.mm */,
+				E5ACAF3017D77FAC00F24B04 /* MainWindow.xib */,
 			);
 			path = "SQLite Manager";
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				E59D164017D4CE3100782F8B /* LICENSING in Resources */,
 				E59D164117D4CE3100782F8B /* macapp.icns in Resources */,
 				E59D164A17D4CE3100782F8B /* winapp.rc in Resources */,
+				E5ACAF3117D77FAC00F24B04 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

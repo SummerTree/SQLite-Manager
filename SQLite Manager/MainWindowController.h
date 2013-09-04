@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) IBOutlet NSTableView *tableView;
 
+@property (nonatomic, strong) IBOutlet NSOutlineView *sidebarOutlineView;
+
 @end
