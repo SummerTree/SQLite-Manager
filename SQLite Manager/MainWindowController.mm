@@ -394,7 +394,7 @@
 - (IBAction)sidebarMenuDidChange:(id)sender {
     // Allow the user to pick a sidebar style
     NSInteger rowSizeStyle = [sender tag];
-    [_sidebarOutlineView setRowSizeStyle:rowSizeStyle];
+    [_sidebarOutlineView setRowSizeStyle:(NSTableViewRowSizeStyle)rowSizeStyle];
 }
 
 - (void)menuNeedsUpdate:(NSMenu *)menu {
