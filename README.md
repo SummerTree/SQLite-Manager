@@ -1,4 +1,4 @@
-Pro-Docs
+SQLite Manager
 ========
 
-Document Reference in iOS device
+Mac client for sqlite database,bases on (http://sqlitebrowser.sourceforge.net/)
