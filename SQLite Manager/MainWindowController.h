@@ -14,4 +14,6 @@
 
 @property (nonatomic, strong) IBOutlet NSOutlineView *sidebarOutlineView;
 
+- (IBAction)openDocument:(id)sender;
+
 @end

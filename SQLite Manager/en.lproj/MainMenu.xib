@@ -73,7 +73,7 @@
                             </menuItem>
                             <menuItem title="Open…" keyEquivalent="o" id="72">
                                 <connections>
-                                    <action selector="openDocument:" target="-1" id="374"/>
+                                    <action selector="openDocument:" target="494" id="ZJE-R0-A0n"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Open Recent" id="124">

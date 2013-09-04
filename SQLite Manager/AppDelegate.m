@@ -15,10 +15,13 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
-    
     self.windowController = [[MainWindowController alloc] initWithWindowNibName:@"MainWindow"];
     [self.windowController showWindow:self];
+}
+
+- (IBAction)openDocument:(id)sender
+{
+    [self.windowController openDocument:sender];
 }
 
 @end

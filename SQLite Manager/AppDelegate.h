@@ -10,8 +10,10 @@
 
 @class MainWindowController;
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, NSOutlineViewDelegate, NSOutlineViewDataSource>
+@interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (nonatomic, strong) MainWindowController *windowController;
+
+- (IBAction)openDocument:(id)sender;
 
 @end
