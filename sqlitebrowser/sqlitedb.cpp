@@ -466,7 +466,7 @@ void DBBrowserDB::getTableRecords( const string & tablename )
     statement.append(" ORDER BY rowid; ");
     //qDebug(statement);
     logSQL(statement, kLogMsg_App);
-    err=sqlite3_prepare(_db,statement.c_str(),statement.size(),
+    err=sqlite3_prepare(_db,statement.c_str(), -1,
                         &vm, &tail);
     if (err == SQLITE_OK){
         int rownum = 0;
@@ -481,8 +481,6 @@ void DBBrowserDB::getTableRecords( const string & tablename )
                 rv = string(strresult?:"");
                 r.push_back(rv);//r << GetDecodedQString(rv);
                 if (e==0){
-                    //TODO:FIX
-                    //idmap.insert(atoi(rv.c_str()),rownum);
 //                    idmap[rownum] =atoi(rv.c_str());
                     idmap[atoi(rv.c_str())] = rownum;
                     rownum++;

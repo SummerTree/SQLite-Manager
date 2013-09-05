@@ -52,13 +52,15 @@ using namespace std;
         //updateTableView(0);
         //if (findWin) findWin->resetFields(db.getTableFields(db.curBrowseTableName));
 //    } else {
+
         vector<string> fields = db.browseFields;
         
         //dataTable->setNumRows(0);
         //dataTable->setNumCols( fields.size() );
         int cheadnum = 0;
         for ( vector<string>::iterator ct = fields.begin(); ct != fields.end(); ++ct ) {
-            //dataTable->horizontalHeader()->setLabel( cheadnum, *ct  );
+//            dataTable->horizontalHeader()->setLabel( cheadnum, *ct  );
+//            NSLog(@"content %s", ct.c_str());
             cheadnum++;
         }
         
@@ -84,8 +86,9 @@ using namespace std;
                 vector<string>& rt = tab[i];
                 for (int e = 1; e < rt.size(); ++e)
                 {
+                    string columnName = fields[colNum];
                     string& content = rt[e];
-                    NSLog(@"content %s", content.c_str());
+                    NSLog(@"%s %s", columnName.c_str(), content.c_str());
                     //string firstline = content.section( '\n', 0,0 );
                     if (content.length()>MAX_DISPLAY_LENGTH)
                     {
