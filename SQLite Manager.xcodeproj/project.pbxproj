@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		E51DB60B17D6F32D005322A3 /* SidebarTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = E51DB60A17D6F32D005322A3 /* SidebarTableCellView.m */; };
 		E56DBFEB17D5C6B600232BC6 /* MainWindowController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E56DBFE917D5C6B600232BC6 /* MainWindowController.mm */; };
+		E57E00A817D89D6C0058CFCF /* DataRowViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E57E00A617D89D6C0058CFCF /* DataRowViewController.mm */; };
+		E57E00A917D89D6C0058CFCF /* DataRowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E57E00A717D89D6C0058CFCF /* DataRowViewController.xib */; };
 		E59D152217D4CB3700782F8B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59D152117D4CB3700782F8B /* Cocoa.framework */; };
 		E59D152C17D4CB3700782F8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E59D152A17D4CB3700782F8B /* InfoPlist.strings */; };
 		E59D152E17D4CB3700782F8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E59D152D17D4CB3700782F8B /* main.m */; };
 		E59D153217D4CB3700782F8B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E59D153017D4CB3700782F8B /* Credits.rtf */; };
-		E59D153517D4CB3700782F8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E59D153417D4CB3700782F8B /* AppDelegate.m */; };
+		E59D153517D4CB3700782F8B /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = E59D153417D4CB3700782F8B /* AppDelegate.mm */; };
 		E59D153817D4CB3700782F8B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E59D153617D4CB3700782F8B /* MainMenu.xib */; };
 		E59D154017D4CB3700782F8B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59D153F17D4CB3700782F8B /* SenTestingKit.framework */; };
 		E59D154117D4CB3700782F8B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59D152117D4CB3700782F8B /* Cocoa.framework */; };
@@ -61,6 +63,9 @@
 		E52C8FE817D5D5BA00702164 /* SQLite Manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "SQLite Manager.entitlements"; sourceTree = "<group>"; };
 		E56DBFE817D5C6B600232BC6 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
 		E56DBFE917D5C6B600232BC6 /* MainWindowController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainWindowController.mm; sourceTree = "<group>"; };
+		E57E00A517D89D6C0058CFCF /* DataRowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRowViewController.h; sourceTree = "<group>"; };
+		E57E00A617D89D6C0058CFCF /* DataRowViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DataRowViewController.mm; sourceTree = "<group>"; };
+		E57E00A717D89D6C0058CFCF /* DataRowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataRowViewController.xib; sourceTree = "<group>"; };
 		E58335F617D634BA00715502 /* utarray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utarray.h; sourceTree = "<group>"; };
 		E58335F717D634BA00715502 /* uthash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uthash.h; sourceTree = "<group>"; };
 		E58335F817D634BA00715502 /* utlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utlist.h; sourceTree = "<group>"; };
@@ -76,7 +81,7 @@
 		E59D152F17D4CB3700782F8B /* SQLite Manager-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SQLite Manager-Prefix.pch"; sourceTree = "<group>"; };
 		E59D153117D4CB3700782F8B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		E59D153317D4CB3700782F8B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E59D153417D4CB3700782F8B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E59D153417D4CB3700782F8B /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		E59D153717D4CB3700782F8B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E59D153E17D4CB3700782F8B /* SQLite ManagerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SQLite ManagerTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E59D153F17D4CB3700782F8B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -241,12 +246,15 @@
 				E51DB60A17D6F32D005322A3 /* SidebarTableCellView.m */,
 				E52C8FE817D5D5BA00702164 /* SQLite Manager.entitlements */,
 				E59D153317D4CB3700782F8B /* AppDelegate.h */,
-				E59D153417D4CB3700782F8B /* AppDelegate.m */,
+				E59D153417D4CB3700782F8B /* AppDelegate.mm */,
 				E59D153617D4CB3700782F8B /* MainMenu.xib */,
 				E59D152817D4CB3700782F8B /* Supporting Files */,
 				E56DBFE817D5C6B600232BC6 /* MainWindowController.h */,
 				E56DBFE917D5C6B600232BC6 /* MainWindowController.mm */,
 				E5ACAF3017D77FAC00F24B04 /* MainWindow.xib */,
+				E57E00A517D89D6C0058CFCF /* DataRowViewController.h */,
+				E57E00A617D89D6C0058CFCF /* DataRowViewController.mm */,
+				E57E00A717D89D6C0058CFCF /* DataRowViewController.xib */,
 			);
 			path = "SQLite Manager";
 			sourceTree = "<group>";
@@ -465,6 +473,7 @@
 				E59D164117D4CE3100782F8B /* macapp.icns in Resources */,
 				E59D164A17D4CE3100782F8B /* winapp.rc in Resources */,
 				E5ACAF3117D77FAC00F24B04 /* MainWindow.xib in Resources */,
+				E57E00A917D89D6C0058CFCF /* DataRowViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,8 +509,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E59D152E17D4CB3700782F8B /* main.m in Sources */,
-				E59D153517D4CB3700782F8B /* AppDelegate.m in Sources */,
+				E59D153517D4CB3700782F8B /* AppDelegate.mm in Sources */,
 				E59D164517D4CE3100782F8B /* sqlbrowser_util.c in Sources */,
+				E57E00A817D89D6C0058CFCF /* DataRowViewController.mm in Sources */,
 				E59D164617D4CE3100782F8B /* sqlite3.c in Sources */,
 				E59D164B17D4CF7800782F8B /* sqlitedb.cpp in Sources */,
 				E56DBFEB17D5C6B600232BC6 /* MainWindowController.mm in Sources */,

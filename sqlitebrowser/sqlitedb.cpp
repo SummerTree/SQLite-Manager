@@ -478,11 +478,13 @@ void DBBrowserDB::getTableRecords( const string & tablename )
                 char * strresult = 0;
                 string rv;
                 strresult = (char *) sqlite3_column_text(vm, e);
-                rv = string(strresult);
+                rv = string(strresult?:"");
                 r.push_back(rv);//r << GetDecodedQString(rv);
                 if (e==0){
                     //TODO:FIX
-//                    idmap.insert(rv.toInt(),rownum);
+                    //idmap.insert(atoi(rv.c_str()),rownum);
+//                    idmap[rownum] =atoi(rv.c_str());
+                    idmap[atoi(rv.c_str())] = rownum;
                     rownum++;
                 }
             }

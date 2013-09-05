@@ -8,8 +8,8 @@
 
 #import "AppDelegate.h"
 #import "MainWindowController.h"
-#import "sqlitedb.h"
 #import "SidebarTableCellView.h"
+#import "DataRowViewController.h"
 
 @interface TableObject : NSObject
 
@@ -30,14 +30,16 @@
 @interface MainWindowController () <NSTableViewDelegate, NSTableViewDataSource, NSOutlineViewDelegate, NSOutlineViewDataSource>
 {
     DBBrowserDB _db;
-    NSTableView *_tableView;
+    NSView *_rightContentView;
     NSMutableArray *_tableNames;
+    
+    DataRowViewController *_browseViewController;
 }
 @end
 
 @implementation MainWindowController
 
-@synthesize tableView = _tableView;
+@synthesize rightContentView = _rightContentView;
 
 @synthesize sidebarOutlineView = _sidebarOutlineView;
 
@@ -57,6 +59,11 @@
     
     self.sidebarOutlineView.delegate = self;
     self.sidebarOutlineView.dataSource = self;
+}
+
+- (DBBrowserDB)database
+{
+    return _db;
 }
 
 - (IBAction)openDocument:(id)sender
@@ -82,6 +89,25 @@
             }
         }
     }];
+}
+
+- (IBAction)schema:(id)sender
+{
+    
+}
+
+- (IBAction)browse:(id)sender
+{
+    if (!_browseViewController) {
+        _browseViewController = [[DataRowViewController alloc] initWithNibName:@"DataRowViewController" bundle:nil];
+    }
+    
+    [_browseViewController browseTable:@"mf_object"];
+}
+
+- (IBAction)runSQL:(id)sender
+{
+    
 }
 
 - (void)reloadOutlineView
