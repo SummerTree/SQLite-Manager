@@ -10,4 +10,6 @@
 
 @interface DataRowViewController : NSViewController
 
+- (void)browseTable:(NSString*)table;
+
 @end
