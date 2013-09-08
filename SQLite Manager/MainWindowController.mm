@@ -96,13 +96,17 @@
     
 }
 
-- (IBAction)browse:(id)sender
+- (IBAction)browse:(NSString*)table
 {
     if (!_browseViewController) {
         _browseViewController = [[DataRowViewController alloc] initWithNibName:@"DataRowViewController" bundle:nil];
+        NSView *view = [_browseViewController view];
+        view.frame = _rightContentView.bounds;
+        [view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
+        [_rightContentView addSubview:view];
     }
     
-    [_browseViewController browseTable:@"mf_object"];
+    [_browseViewController browseTable:table];
 }
 
 - (IBAction)runSQL:(id)sender
@@ -205,10 +209,11 @@
 - (void)outlineViewSelectionDidChange:(NSNotification *)notification {
     if ([_sidebarOutlineView selectedRow] != -1) {
         NSString *item = [_sidebarOutlineView itemAtRow:[_sidebarOutlineView selectedRow]];
-        if ([_sidebarOutlineView parentForItem:item] != nil) {
+        [self browse:item];
+//        if ([_sidebarOutlineView parentForItem:item] != nil) {
             // Only change things for non-root items (root items can be selected, but are ignored)
-            [self _setContentViewToName:item];
-        }
+//            [self _setContentViewToName:item];
+//        }
     }
 }
 

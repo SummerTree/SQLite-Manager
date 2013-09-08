@@ -13,20 +13,43 @@
 
 using namespace std;
 
-@interface DataRowViewController ()
+//@interface ColumnData : NSObject
+//
+//@property (nonatomic, retain) NSString *columnName;
+//@property (nonatomic, retain) NSMutableArray *columnRecords;
+//
+//@end
+//
+//@implementation ColumnData
+//
+//@synthesize columnName = _columnName;
+//
+//@synthesize columnRecords = _columnRecords;
+//
+//@end
+
+@interface DataRowViewController () <NSTableViewDelegate, NSTableViewDataSource>
 {
     int recAtTop;
     int recsPerView;
+    
+    NSMutableDictionary *_columnDatas;
 }
+
+@property (strong) IBOutlet NSTextView *textView;
+@property (strong) IBOutlet NSTableView *tableView;
+
 @end
 
 @implementation DataRowViewController
+
+@synthesize textView = _textView;
+@synthesize tableView = _tableView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Initialization code here.
         recsPerView = 10;
     }
     return self;
@@ -47,73 +70,113 @@ using namespace std;
         return;
     }
     
-//    if (mustreset){
-        //recAtTop = 0;
-        //updateTableView(0);
-        //if (findWin) findWin->resetFields(db.getTableFields(db.curBrowseTableName));
-//    } else {
-
-        vector<string> fields = db.browseFields;
-        
-        //dataTable->setNumRows(0);
-        //dataTable->setNumCols( fields.size() );
-        int cheadnum = 0;
-        for ( vector<string>::iterator ct = fields.begin(); ct != fields.end(); ++ct ) {
-//            dataTable->horizontalHeader()->setLabel( cheadnum, *ct  );
-//            NSLog(@"content %s", ct.c_str());
-            cheadnum++;
-        }
-        
-        rowList tab = db.browseRecs;
-        int maxRecs = db.getRecordCount();
-        int recsThisView = maxRecs - recAtTop;
-        
-        if (recsThisView>recsPerView)
-            recsThisView = recsPerView;
-        
-        //dataTable->setNumRows( recsThisView);
-        
-        if ( recsThisView > 0 ) {
-            
-            int rowNum = 0;
-            int colNum = 0;
-            string rowLabel;
-            for (int i = recAtTop; i < tab.size(); ++i)
-            {
-                //rowLabel.setNum(recAtTop+rowNum+1);
-                //dataTable->verticalHeader()->setLabel( rowNum, rowLabel  );
-                colNum = 0;
-                vector<string>& rt = tab[i];
-                for (int e = 1; e < rt.size(); ++e)
-                {
-                    string columnName = fields[colNum];
-                    string& content = rt[e];
-                    NSLog(@"%s %s", columnName.c_str(), content.c_str());
-                    //string firstline = content.section( '\n', 0,0 );
-                    if (content.length()>MAX_DISPLAY_LENGTH)
-                    {
-                        //firstline.truncate(MAX_DISPLAY_LENGTH);
-                        //firstline.append("...");
-                    }
-                    //dataTable->setText( rowNum, colNum, firstline);
-                    colNum++;
-                }
-                rowNum++;
-                if (rowNum==recsThisView) break;
-            }
-            
-        }
-        
-        /*
-        //dataTable->clearSelection(true);
-        if (lineToSelect!=-1){
-            //qDebug("inside selection");
-            selectTableLine(lineToSelect);
-        }
-        setRecordsetLabel();
-        QApplication::restoreOverrideCursor();
-         */
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    
+    if (!_columnDatas) {
+        _columnDatas = [NSMutableDictionary dictionary];
+    } else {
+        [_columnDatas removeAllObjects];
+    }
+    
+    vector<string> fields = db.browseFields;
+    
+//    int cheadnum = 0;
+//    for ( vector<string>::iterator ct = fields.begin(); ct != fields.end(); ++ct ) {
+//        ColumnData *columnData = [[ColumnData alloc] init];
+//        columnData.columnName = [NSString stringWithUTF8String:(*ct).c_str()];
+//        columnData.columnRecords = [NSMutableArray array];
+//        cheadnum++;
 //    }
+    
+    rowList tab = db.browseRecs;
+    int maxRecs = db.getRecordCount();
+    int recsThisView = maxRecs - recAtTop;
+    
+    if (recsThisView>recsPerView)
+        recsThisView = recsPerView;
+    
+    if ( recsThisView > 0 ) {
+        
+        int rowNum = 0;
+        int colNum = 0;
+        string rowLabel;
+        for (int i = recAtTop; i < tab.size(); ++i)
+        {
+            colNum = 0;
+            vector<string>& rt = tab[i];
+            for (int e = 1; e < rt.size(); ++e)
+            {
+                string columnName = fields[colNum];
+                string& content = rt[e];
+                NSLog(@"%s %s", columnName.c_str(), content.c_str());
+                NSString *columnNameKey = [NSString stringWithUTF8String:columnName.c_str()];
+                NSMutableArray *columnRecords = [_columnDatas objectForKey:columnNameKey];
+                if (!columnRecords) {
+                    columnRecords = [NSMutableArray array];
+                    [_columnDatas setObject:columnRecords forKey:columnNameKey];
+                }
+                [columnRecords addObject:[NSString stringWithUTF8String:content.c_str()]];
+                colNum++;
+            }
+            rowNum++;
+            if (rowNum==recsThisView) break;
+        }
+        
+    }
+    
+    NSArray *columnKeys = [_columnDatas allKeys];
+    
+    while([[_tableView tableColumns] count] > 0) {
+        [_tableView removeTableColumn:[[_tableView tableColumns] lastObject]];
+    }
+    
+    for (NSString *columnKey in columnKeys)
+    {
+        NSTableColumn * column = [[NSTableColumn alloc] initWithIdentifier:columnKey];
+        [[column headerCell] setTitle:columnKey];
+        [column setWidth:100];
+        [_tableView addTableColumn:column];
+    }
+    [_tableView reloadData];
+}
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
+{
+    NSInteger count = 0;
+    NSArray *allColumnsArray =[_columnDatas allValues];
+    if ([allColumnsArray count]) {
+        count = [[allColumnsArray objectAtIndex:0] count];
+    }
+    return count;
+}
+
+/* This method is required for the "Cell Based" TableView, and is optional for the "View Based" TableView. If implemented in the latter case, the value will be set to the view at a given row/column if the view responds to -setObjectValue: (such as NSControl and NSTableCellView).
+ */
+- (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+    NSString *columnKey = tableColumn.identifier;
+    
+    NSArray *columnRecords = [_columnDatas objectForKey:columnKey];
+    
+    if ([columnRecords count] > row)
+    {
+        return [columnRecords objectAtIndex:row];
+    }
+    else
+    {
+        return @"";
+    }
+}
+
+#pragma mark -
+#pragma mark ***** Optional Methods *****
+
+/* NOTE: This method is not called for the View Based TableView.
+ */
+- (void)tableView:(NSTableView *)tableView setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+    
 }
 
 @end

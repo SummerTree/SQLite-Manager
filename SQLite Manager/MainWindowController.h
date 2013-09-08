@@ -20,8 +20,6 @@
 
 - (IBAction)schema:(id)sender;
 
-- (IBAction)browse:(id)sender;
-
 - (IBAction)runSQL:(id)sender;
 
 - (DBBrowserDB)database;
