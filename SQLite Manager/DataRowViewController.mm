@@ -28,7 +28,7 @@ using namespace std;
 //
 //@end
 
-@interface DataRowViewController () <NSTableViewDelegate, NSTableViewDataSource>
+@interface DataRowViewController () <NSTableViewDelegate, NSTableViewDataSource, NSTextViewDelegate>
 {
     NSMutableDictionary *_columnDatas;
 }
@@ -51,6 +51,14 @@ using namespace std;
     return self;
 }
 
+- (void)loadView
+{
+    [super loadView];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _textView.delegate = self;
+}
+
 - (void)browseTable:(NSString*)table
 {
     if (![table length]){
@@ -65,9 +73,6 @@ using namespace std;
     if (!db.browseTable(tablename)){
         return;
     }
-    
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
     
     if (!_columnDatas) {
         _columnDatas = [NSMutableDictionary dictionary];
@@ -111,6 +116,11 @@ using namespace std;
         rowNum++;
     }
     
+    [self reloadTableView];
+}
+
+- (void)reloadTableView
+{
     NSArray *columnKeys = [_columnDatas allKeys];
     
     while([[_tableView tableColumns] count] > 0) {
@@ -163,6 +173,102 @@ using namespace std;
 - (void)tableView:(NSTableView *)tableView setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
     
+}
+
+- (void)executeQuery
+{
+    NSString *query = [_textView string];
+    if (![query length])
+    {
+        //QMessageBox::information( this, applicationName, "Query string is empty" );
+        return;
+    }
+    
+    if (!_columnDatas) {
+        _columnDatas = [NSMutableDictionary dictionary];
+    } else {
+        [_columnDatas removeAllObjects];
+    }
+
+    
+    DBBrowserDB db = [[(AppDelegate*)[NSApplication sharedApplication].delegate windowController] database];
+    //log the query
+    //db.logSQL(query, kLogMsg_User);
+    sqlite3_stmt *vm;
+    const char *tail=NULL;
+    int ncol;
+    int err=0;
+    //Accept multi-line queries, by looping until the tail is empty
+    while (1) {
+        if (tail!=NULL) {
+            query = [NSString stringWithUTF8String:tail];
+        }
+        
+        err=sqlite3_prepare(db._db,[query UTF8String], -1,
+                            &vm, &tail);
+        if (err == SQLITE_OK){
+            db.setDirty(true);
+            int rownum = 0;
+            //Q3ListViewItem * lasttbitem = 0;
+            bool mustCreateColumns = true;
+            while ( sqlite3_step(vm) == SQLITE_ROW ){
+                ncol = sqlite3_data_count(vm);
+                //Q3ListViewItem * tbitem = new Q3ListViewItem( queryResultListView, lasttbitem);
+                //setup num of cols here for display grid
+                if (mustCreateColumns)
+                {
+                    for (int e=0; e<ncol; e++)
+                        //queryResultListView->addColumn(sqlite3_column_name(vm, e));
+                        mustCreateColumns = false;
+                }
+                for (int e=0; e<ncol; e++){
+                    char * strresult = 0;
+                    NSString *rv;
+                    strresult = (char *) sqlite3_column_text(vm, e);
+                    rv = [NSString stringWithUTF8String:strresult?:""];
+                    
+                    const char * columnName = sqlite3_column_name(vm, e);
+                    
+                    NSLog(@"%s %@", columnName, rv);
+                    NSString *columnNameKey = [NSString stringWithUTF8String:columnName?:""];
+                    NSMutableArray *columnRecords = [_columnDatas objectForKey:columnNameKey];
+                    if (!columnRecords) {
+                        columnRecords = [NSMutableArray array];
+                        [_columnDatas setObject:columnRecords forKey:columnNameKey];
+                    }
+                    [columnRecords addObject:rv];
+                    
+                    rownum++;
+                }
+            }
+            sqlite3_finalize(vm);
+        }else{
+            //lastErrorMessage = QString (sqlite3_errmsg(db._db));
+        }
+        //queryErrorLineEdit->setText(lastErrorMessage);
+        //queryResultListView->setResizeMode(Q3ListView::AllColumns);
+        
+        if(*tail==0) break;
+    }
+    
+    [self reloadTableView];
+}
+
+- (BOOL)textView:(NSTextView *)textView doCommandBySelector:(SEL)commandSelector
+{
+    BOOL retval = NO;
+    
+    if (commandSelector == @selector(insertNewline:)) {
+        
+        retval = YES; // causes Apple to NOT fire the default enter action
+        
+        // Do your special handling of the "enter" key here
+        [self executeQuery];
+    }
+    
+    NSLog(@"Selector = %@", NSStringFromSelector( commandSelector ) );
+    
+    return retval;  
 }
 
 @end
