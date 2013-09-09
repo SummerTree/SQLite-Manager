@@ -30,9 +30,6 @@ using namespace std;
 
 @interface DataRowViewController () <NSTableViewDelegate, NSTableViewDataSource>
 {
-    int recAtTop;
-    int recsPerView;
-    
     NSMutableDictionary *_columnDatas;
 }
 
@@ -50,7 +47,6 @@ using namespace std;
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        recsPerView = 10;
     }
     return self;
 }
@@ -90,39 +86,29 @@ using namespace std;
 //    }
     
     rowList tab = db.browseRecs;
-    int maxRecs = db.getRecordCount();
-    int recsThisView = maxRecs - recAtTop;
     
-    if (recsThisView>recsPerView)
-        recsThisView = recsPerView;
-    
-    if ( recsThisView > 0 ) {
-        
-        int rowNum = 0;
-        int colNum = 0;
-        string rowLabel;
-        for (int i = recAtTop; i < tab.size(); ++i)
+    int rowNum = 0;
+    int colNum = 0;
+    string rowLabel;
+    for (int i = 0; i < tab.size(); ++i)
+    {
+        colNum = 0;
+        vector<string>& rt = tab[i];
+        for (int e = 1; e < rt.size(); ++e)
         {
-            colNum = 0;
-            vector<string>& rt = tab[i];
-            for (int e = 1; e < rt.size(); ++e)
-            {
-                string columnName = fields[colNum];
-                string& content = rt[e];
-                NSLog(@"%s %s", columnName.c_str(), content.c_str());
-                NSString *columnNameKey = [NSString stringWithUTF8String:columnName.c_str()];
-                NSMutableArray *columnRecords = [_columnDatas objectForKey:columnNameKey];
-                if (!columnRecords) {
-                    columnRecords = [NSMutableArray array];
-                    [_columnDatas setObject:columnRecords forKey:columnNameKey];
-                }
-                [columnRecords addObject:[NSString stringWithUTF8String:content.c_str()]];
-                colNum++;
+            string columnName = fields[colNum];
+            string& content = rt[e];
+            NSLog(@"%s %s", columnName.c_str(), content.c_str());
+            NSString *columnNameKey = [NSString stringWithUTF8String:columnName.c_str()];
+            NSMutableArray *columnRecords = [_columnDatas objectForKey:columnNameKey];
+            if (!columnRecords) {
+                columnRecords = [NSMutableArray array];
+                [_columnDatas setObject:columnRecords forKey:columnNameKey];
             }
-            rowNum++;
-            if (rowNum==recsThisView) break;
+            [columnRecords addObject:[NSString stringWithUTF8String:content.c_str()]];
+            colNum++;
         }
-        
+        rowNum++;
     }
     
     NSArray *columnKeys = [_columnDatas allKeys];
