@@ -27,21 +27,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="960" height="540"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="20" horizontalPageScroll="10" verticalLineScroll="20" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="60">
-                                <rect key="frame" x="0.0" y="0.0" width="743" height="540"/>
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="20" horizontalPageScroll="10" verticalLineScroll="20" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="60">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="540"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <clipView key="contentView" id="Rqp-nj-zm5">
-                                    <rect key="frame" x="0.0" y="0.0" width="743" height="540"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="540"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="20" viewBased="YES" indentationPerLevel="14" outlineTableColumn="64" id="61">
-                                            <rect key="frame" x="0.0" y="0.0" width="743" height="540"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="540"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="0.0"/>
                                             <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="740" minWidth="16" maxWidth="1000" id="64">
+                                                <tableColumn width="197" minWidth="16" maxWidth="1000" id="64">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -55,7 +55,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <textField identifier="HeaderTextField" verticalHuggingPriority="750" id="66">
-                                                            <rect key="frame" x="1" y="0.0" width="740" height="17"/>
+                                                            <rect key="frame" x="1" y="0.0" width="197" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Header Label" usesSingleLineMode="YES" id="84">
                                                                 <font key="font" metaFont="smallSystem"/>
@@ -64,7 +64,7 @@
                                                             </textFieldCell>
                                                         </textField>
                                                         <customView identifier="MainCell" id="67" userLabel="MainCell" customClass="SidebarTableCellView">
-                                                            <rect key="frame" x="1" y="17" width="740" height="26"/>
+                                                            <rect key="frame" x="1" y="17" width="197" height="26"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                             <subviews>
                                                                 <imageView translatesAutoresizingMaskIntoConstraints="NO" id="76">
@@ -74,7 +74,7 @@
                                                                         <constraint firstAttribute="height" constant="16" id="77"/>
                                                                         <constraint firstAttribute="width" constant="16" id="78"/>
                                                                     </constraints>
-                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSDefaultApplicationIcon" id="79"/>
+                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSApplicationIcon" id="79"/>
                                                                 </imageView>
                                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="74">
                                                                     <rect key="frame" x="21" y="6" width="316" height="14"/>
@@ -125,6 +125,9 @@
                                     </subviews>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="xXx-F8-OaI"/>
+                                </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" id="62">
                                     <rect key="frame" x="1" y="662" width="214" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
@@ -135,7 +138,7 @@
                                 </scroller>
                             </scrollView>
                             <customView fixedFrame="YES" id="jsM-ar-A7C">
-                                <rect key="frame" x="744" y="0.0" width="216" height="540"/>
+                                <rect key="frame" x="201" y="0.0" width="759" height="540"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                         </subviews>
@@ -152,9 +155,26 @@
                     <constraint firstItem="53" firstAttribute="top" secondItem="2" secondAttribute="top" id="99"/>
                 </constraints>
             </view>
+            <toolbar key="toolbar" implicitIdentifier="ECC51C37-A11D-480E-96F2-760497158E2A" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="HYw-Y6-QGg">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="iNb-H2-cjr"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarCustomizeToolbarItem" id="dqs-9p-sUU">
+                        <connections>
+                            <action selector="runSQL:" target="-2" id="faG-pf-YEo"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="uoX-de-9Rl"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="qsJ-1b-0lH"/>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="iNb-H2-cjr"/>
+                    <toolbarItem reference="dqs-9p-sUU"/>
+                    <toolbarItem reference="qsJ-1b-0lH"/>
+                </defaultToolbarItems>
+            </toolbar>
         </window>
     </objects>
     <resources>
-        <image name="NSDefaultApplicationIcon" width="128" height="128"/>
+        <image name="NSApplicationIcon" width="128" height="128"/>
     </resources>
 </document>

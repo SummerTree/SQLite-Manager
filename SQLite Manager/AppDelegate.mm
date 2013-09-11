@@ -16,6 +16,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     self.windowController = [[MainWindowController alloc] initWithWindowNibName:@"MainWindow"];
+    //TODO:FIX constraint
     [self.windowController showWindow:self];
 }
 

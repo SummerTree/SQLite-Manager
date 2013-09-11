@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1D40C03C-514C-4A67-8BE0-801237F7DDF7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SQLite Manager</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9303DC85-7A2D-4848-A9BB-02753DE5CBFB</key>
+		<string>https://github.com/innerdesire/SQLite-Manager.git</string>
+		<key>DD99E91A-1A62-41D8-A931-03E9A47B5360</key>
+		<string>https://github.com/troydhanson/uthash.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SQLite Manager.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9303DC85-7A2D-4848-A9BB-02753DE5CBFB</key>
+		<string>../..</string>
+		<key>DD99E91A-1A62-41D8-A931-03E9A47B5360</key>
+		<string>../../uthash</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/innerdesire/SQLite-Manager.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9303DC85-7A2D-4848-A9BB-02753DE5CBFB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9303DC85-7A2D-4848-A9BB-02753DE5CBFB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SQLite Manager</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DD99E91A-1A62-41D8-A931-03E9A47B5360</string>
+			<key>IDESourceControlWCCName</key>
+			<string>uthash</string>
+		</dict>
+	</array>
+</dict>
+</plist>

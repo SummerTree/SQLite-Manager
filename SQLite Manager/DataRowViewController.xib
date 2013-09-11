@@ -29,11 +29,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="124" height="107"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="minSize" width="124" height="107"/>
-                                <size key="maxSize" width="478" height="10000000"/>
+                                <size key="minSize" width="478" height="107"/>
+                                <size key="maxSize" width="480" height="10000000"/>
                                 <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="minSize" width="124" height="107"/>
-                                <size key="maxSize" width="478" height="10000000"/>
+                                <size key="minSize" width="478" height="107"/>
+                                <size key="maxSize" width="480" height="10000000"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -96,7 +96,7 @@
                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </clipView>
                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" id="jlt-LT-sgD">
-                        <rect key="frame" x="1" y="1" width="0.0" height="16"/>
+                        <rect key="frame" x="1" y="136" width="478" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" id="QLD-BI-nvQ">
