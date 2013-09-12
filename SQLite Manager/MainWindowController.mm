@@ -111,7 +111,7 @@
 
 - (IBAction)runSQL:(id)sender
 {
-    
+    [_browseViewController executeQuery];
 }
 
 - (void)reloadOutlineView

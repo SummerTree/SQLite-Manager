@@ -155,26 +155,26 @@
                     <constraint firstItem="53" firstAttribute="top" secondItem="2" secondAttribute="top" id="99"/>
                 </constraints>
             </view>
-            <toolbar key="toolbar" implicitIdentifier="ECC51C37-A11D-480E-96F2-760497158E2A" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="HYw-Y6-QGg">
+            <toolbar key="toolbar" implicitIdentifier="96B50B24-B401-465E-8B44-A30FBE375724" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="JX7-Mw-uDc">
                 <allowedToolbarItems>
-                    <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="iNb-H2-cjr"/>
-                    <toolbarItem implicitItemIdentifier="NSToolbarCustomizeToolbarItem" id="dqs-9p-sUU">
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="G04-9d-Q2l"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="XAQ-9Y-wmn"/>
+                    <toolbarItem implicitItemIdentifier="6228F07D-1C38-4889-B663-B973F67A58A8" label="Run SQL" paletteLabel="Run SQL" tag="-1" image="NSRightFacingTriangleTemplate" id="Tnr-8c-GTq">
                         <connections>
-                            <action selector="runSQL:" target="-2" id="faG-pf-YEo"/>
+                            <action selector="runSQL:" target="-2" id="88W-2M-HHH"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="uoX-de-9Rl"/>
-                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="qsJ-1b-0lH"/>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
-                    <toolbarItem reference="iNb-H2-cjr"/>
-                    <toolbarItem reference="dqs-9p-sUU"/>
-                    <toolbarItem reference="qsJ-1b-0lH"/>
+                    <toolbarItem reference="G04-9d-Q2l"/>
+                    <toolbarItem reference="Tnr-8c-GTq"/>
+                    <toolbarItem reference="XAQ-9Y-wmn"/>
                 </defaultToolbarItems>
             </toolbar>
         </window>
     </objects>
     <resources>
         <image name="NSApplicationIcon" width="128" height="128"/>
+        <image name="NSRightFacingTriangleTemplate" width="9" height="9"/>
     </resources>
 </document>

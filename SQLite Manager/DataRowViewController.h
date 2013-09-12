@@ -12,4 +12,6 @@
 
 - (void)browseTable:(NSString*)table;
 
+- (void)executeQuery;
+
 @end
