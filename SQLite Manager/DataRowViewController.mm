@@ -35,6 +35,7 @@ using namespace std;
 
 @property (strong) IBOutlet NSTextView *textView;
 @property (strong) IBOutlet NSTableView *tableView;
+@property (strong) IBOutlet NSTextView *resultTextView;
 
 @end
 
@@ -42,6 +43,7 @@ using namespace std;
 
 @synthesize textView = _textView;
 @synthesize tableView = _tableView;
+@synthesize resultTextView = _resultTextView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -189,7 +191,6 @@ using namespace std;
         [_columnDatas removeAllObjects];
     }
 
-    NSString *errorMessage = nil;
     DBBrowserDB db = [[(AppDelegate*)[NSApplication sharedApplication].delegate windowController] database];
     //db.logSQL(query, kLogMsg_User);
     sqlite3_stmt *vm;
@@ -237,8 +238,7 @@ using namespace std;
             }
             sqlite3_finalize(vm);
         }else{
-            errorMessage = [NSString stringWithUTF8String:sqlite3_errmsg(db._db)?:""];
-            NSLog(@"error %@", errorMessage);
+            _resultTextView.string = [NSString stringWithUTF8String:sqlite3_errmsg(db._db)?:""];
             break;
         }
         if(*tail==0) break;

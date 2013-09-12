@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="DataRowViewController">
             <connections>
+                <outlet property="resultTextView" destination="1Of-Bs-n5s" id="FjM-sg-QzK"/>
                 <outlet property="tableView" destination="gnc-5q-3mK" id="PRt-C8-DFC"/>
                 <outlet property="textView" destination="mGc-GC-OA9" id="CXb-fV-Eq0"/>
                 <outlet property="view" destination="KoK-Jz-CEZ" id="HM4-WV-EM6"/>
@@ -26,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView importsGraphics="NO" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="mGc-GC-OA9">
-                                <rect key="frame" x="0.0" y="0.0" width="204" height="122"/>
+                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="122"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="minSize" width="204" height="122"/>
@@ -58,13 +59,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView importsGraphics="NO" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="1Of-Bs-n5s">
-                                <rect key="frame" x="0.0" y="0.0" width="682" height="98"/>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="12"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="minSize" width="682" height="98"/>
                                 <size key="maxSize" width="682" height="10000000"/>
                                 <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="minSize" width="682" height="98"/>
                                 <size key="maxSize" width="682" height="10000000"/>
                             </textView>
                         </subviews>
