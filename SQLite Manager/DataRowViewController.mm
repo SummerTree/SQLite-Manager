@@ -105,7 +105,7 @@ using namespace std;
         {
             string columnName = fields[colNum];
             string& content = rt[e];
-            NSLog(@"%s %s", columnName.c_str(), content.c_str());
+            //NSLog(@"%s %s", columnName.c_str(), content.c_str());
             NSString *columnNameKey = [NSString stringWithUTF8String:columnName.c_str()];
             NSMutableArray *columnRecords = [_columnDatas objectForKey:columnNameKey];
             if (!columnRecords) {
@@ -224,7 +224,7 @@ using namespace std;
                     
                     const char * columnName = sqlite3_column_name(vm, e);
                     
-                    NSLog(@"%s %@", columnName, rv);
+                    //NSLog(@"%s %@", columnName, rv);
                     NSString *columnNameKey = [NSString stringWithUTF8String:columnName?:""];
                     NSMutableArray *columnRecords = [_columnDatas objectForKey:columnNameKey];
                     if (!columnRecords) {
